@@ -1,9 +1,5 @@
 const soma = require('./soma');
-if (soma(2,3) !== 5) {
-  console.error('❌ Teste falhou');
-  process.exit(1);
-} else {
-  console.log('✅ Teste passou');
-}
-// Mantém o processo ativo
-setInterval(() => {}, 1000);
+
+test('soma simples 2 + 3 deve ser 5', () => {
+  expect(soma(2, 3)).toBe(5);
+});
